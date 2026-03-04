@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CS42 Week 8 Example: Loading Web Fonts with TypeKit's WebFontLoader</title>
+    <style>
+      /* define font-family name to associate with web font outline file */
+      @font-face {
+        font-family: 'Freckle Face';
+        src: url(assets/FreckleFace-Regular.ttf);
+      }
+      @font-face {
+        font-family: 'Jacquarda Bastarda';
+        src: url(assets/JacquardaBastarda9-Regular.ttf);
+      }
+      body { margin:0; background: #000; }
+    </style>
+    <!-- load Phaser 3.5.x game engine JavaScript library file via local file -->
+    <script src="vendors/phaser-arcade-physics.min.js"></script>
+    <!-- Load webfont.js library | https://github.com/typekit/webfontloader -->
+    <script src="vendors/webfont.js"></script>
+  </head>
+  <body>
+    <!-- Load custom script for game -->
+    <script src="webfonts-example.js"></script>
+  </body>
+</html>

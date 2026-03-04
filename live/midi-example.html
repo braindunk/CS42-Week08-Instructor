@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CS42 Week 8 Live Example: MIDI Audio with Tone.js</title>
+    <style>
+      body { margin:0; background: #000; }
+    </style>
+    <!-- load Phaser game engine JavaScript library file via local file -->
+    <script src="vendors/phaser-arcade-physics.min.js"></script>
+    <!-- load web components polyfills js library via local file 
+         (source github.com/webcomponents/webcomponentsjs) -->
+    <script src="vendors/webcomponents-bundle.js"></script>
+    <!-- load MidiConvert js library via local file 
+         (source github.com/baweaver/MidiConvert) -->
+    <script src="vendors/tonejs/MidiConvert.js"></script>
+    <!-- load Tone.js MIDI js library via local files 
+         (source tonejs.github.io) -->
+    <script src="vendors/tonejs/Tone.js"></script>
+    <script src="vendors/tonejs/tone-ui.js"></script>
+    <script src="vendors/tonejs/components.js"></script>
+  </head>
+  <body>
+    <!-- code example today factored (divided) into two separate js files -->
+    <!-- load custom midi audio scripts -->
+    <script src="midi-example-audio.js"></script>
+    <!-- load custom phaser game script -->
+    <script src="midi-example.js"></script>
+  </body>
+</html>
