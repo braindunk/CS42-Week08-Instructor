@@ -130,9 +130,9 @@ function myCreate() {
   );
   for(c=0; c<10; c++) {
     r=Phaser.Math.Between(0, 25);
-    bricks.children.entries[c].setTexture( 'text-' + letters.charAt(r) );
-    bricks.children.entries[c].setState( letters.charAt(r) );
-    bricks.children.entries[c].setInteractive();
+    bricks.getChildren()[c].setTexture( 'text-' + letters.charAt(r) );
+    bricks.getChildren()[c].setState( letters.charAt(r) );
+    bricks.getChildren()[c].setInteractive();
   }
   this.input.on('gameobjectdown', tileTapped)
 
@@ -207,8 +207,8 @@ function myCreate() {
     }
   );
   for(c=0; c<8; c++) {
-    guesses.children.entries[c].setState( "guess" );
-    guesses.children.entries[c].setInteractive();
+    guesses.getChildren()[c].setState( "guess" );
+    guesses.getChildren()[c].setInteractive();
   }
 
   // start first question
@@ -242,8 +242,8 @@ function resetGuesses() {
   guessCounter = 0;
   guessWord = "";
   for(let c=0; c<8; c++) {
-    guesses.children.entries[c].setTexture( 'text- ' );
-    guesses.children.entries[c].setState( "guess" );
+    guesses.getChildren()[c].setTexture( 'text- ' );
+    guesses.getChildren()[c].setState( "guess" );
   }
 }
 
@@ -287,8 +287,8 @@ function setChoices() {
   // scramble swap all
   shuffle(arr);
   for(c=0; c < 10; c++) {
-    bricks.children.entries[c].setTexture( 'text-' + arr[c]);
-    bricks.children.entries[c].setState(arr[c]);
+    bricks.getChildren()[c].setTexture( 'text-' + arr[c]);
+    bricks.getChildren()[c].setState(arr[c]);
   }
   console.log(arr);
 }
@@ -303,8 +303,8 @@ function tileTapped(pointer, gameObject) {
       checkGuess();
       break;
     default:
-      guesses.children.entries[guessCounter].setTexture("text-" + gameObject.state);
-      guesses.children.entries[guessCounter].setState("guessed");
+      guesses.getChildren()[guessCounter].setTexture("text-" + gameObject.state);
+      guesses.getChildren()[guessCounter].setState("guessed");
       guessWord += gameObject.state;
       console.log(guessWord);
       guessCounter++;
